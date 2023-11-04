@@ -1,8 +1,7 @@
 ****************************************
 * HELLO.S
 ****************************************
-_PRINT		equ	$ff09
-_EXIT		equ	$ff00
+        .include DOSCALL.MAC
 *
 		pea		mes
 		.dc.w	_PRINT
