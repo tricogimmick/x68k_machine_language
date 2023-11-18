@@ -3,8 +3,9 @@
 ****************************************
         .include DOSCALL.MAC
 *
-        move.w  #1, d1
+        move.w  #0, d1
 loop:
+        add.w  #1, d1
         move.w  d1, d2
         add.w   #'0', d2
         move.w  d2, -(sp)
@@ -15,8 +16,7 @@ loop:
 		DOS	_PRINT
 		addq.l	#4, sp
 
-        add.w  #1, d1
-        cmp.w  #6, d1
+        cmp.w  #5, d1
         bne     loop
 
 		.dc.w	_EXIT
