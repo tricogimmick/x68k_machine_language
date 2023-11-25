@@ -12,13 +12,13 @@ loop:
         DOS  _PUTCHAR
         addq.l #2, sp   
 
-		pea		crlf
-		DOS	_PRINT
-		addq.l	#4, sp
+        pea		crlf
+        DOS	_PRINT
+        addq.l	#4, sp
 
         cmp.w  #5, d1
         bne     loop
 
-		.dc.w	_EXIT
+        .dc.w	_EXIT
 crlf:	.dc.b	$d,$a,0
 
