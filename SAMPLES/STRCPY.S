@@ -21,7 +21,7 @@ entry:
 ****************************************
 * strcpy
 * string copy
-* Paramater
+* Parameter
 * A0 : source string data address
 * A1 : destination buffer address
 ****************************************
