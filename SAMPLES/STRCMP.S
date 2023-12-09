@@ -61,8 +61,10 @@ strcmp1:
     beq     strcmp2
     cmp.b   (a0)+,(a1)+
     beq     strcmp1
+    bra     strcmp3
 strcmp2:
     cmp.b   (a0)+,(a1)+
+strcmp3:
     movem.l (sp)+, a0-a1
     rts
 *
